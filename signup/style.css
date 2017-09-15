@@ -141,6 +141,11 @@ a {
 }
 
 @media screen and (max-width: 788px)  {
+	.form-flat {
+		padding-left: 26px;
+		padding-right: 26px;
+	}
+
 	.w50 {
 		width: 100%;
 		float: left;
