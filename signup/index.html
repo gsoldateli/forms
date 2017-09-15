@@ -1,10 +1,53 @@
+<!-- Form Based On https://dribbble.com/shots/1774471-Positionly-Signup-Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Signup Form</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<div class="container">
+		<form action="POST" action="#" class="form-flat">
+				<h1 class="form-title">Register yourself below</h1>
+				<div class="cf">
+				<div class="input-wrapper w50">
+					<span class="input-icon fa fa-user"></span>
+					<input type="text" name="firstName" placeholder="Your First Name">			
+				</div>
+				<div class="input-wrapper w50">
+				<span class="input-icon fa fa-user"></span>
+				<input type="text" name="lastName" placeholder="Your Last Name">			
+				</div>
+
+				<div class="input-wrapper w50">
+					<span class="input-icon fa fa-envelope"></span>
+				<input type="email" name="email" placeholder="Your email@mail.com here"></input>		
+				</div>
+								<div class="input-wrapper w50">
+					<span class="input-icon fa fa-child"></span>
+				<input type="date" name="birth">
+				</div>
+					<div class="input-wrapper w50">
+								<span class="input-icon fa fa-key"></span>
+				<input type="password" name="password" placeholder="Enter your password here">
+
+				</div>
+												<div class="input-wrapper w50">
+					<span class="input-icon fa fa-key"></span>
+				<input type="password" name="password" placeholder="Please confirm your password...">
+				</div>
+				</div>
+				<div class="cf">
+					<input class="btn-signup" type="submit" name="signup" value="Sign UP!">	
+					<a href="../register/" class="link-register">Already have an account?</a>
+				</div>
+				
+			</form>
+		
+	</div>
+	
 	
 </body>
 </html>

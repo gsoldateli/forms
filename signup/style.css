@@ -4,7 +4,145 @@ html {
 
 }
 
+body {
+	background-color: #303030;
+}
+
+a {
+	text-decoration: none;
+}
+
 .container {
 	max-width: 960px;
 	margin: 0 auto;
+}
+
+.form-title {
+	color: #fff;
+}
+
+.form-flat {
+	border: 4px solid #fff;
+	padding: 20px 80px;
+}
+
+.cf:after {
+	content: " ";
+	clear: both;
+	display: block;
+}
+
+.form-flat input {
+	display: block;
+	position: relative;
+	background-color: transparent;
+	border: none;
+	border-bottom: 4px solid #fff;
+	color: #fff;
+	padding: 14px 20px;
+	margin-bottom: 20px;
+	font-size: 1.3rem;
+	line-height: 1.4rem;
+	width: 100%;
+	max-height: 54px;
+	box-sizing: border-box;
+	outline: none;
+
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;	
+}
+
+.form-flat input:hover {
+    border-color: #92dcff;
+}
+
+.input-wrapper input:hover ~ .input-icon {
+	color: red;
+}
+
+.form-flat input:focus {
+	border-color: #5c9ab7;
+	
+}
+
+.form-flat input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+.form-flat input::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+.form-flat input:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+.form-flat input:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}
+
+.buttons-container {
+	clear: both;
+}
+.form-flat input[type="submit"] {
+	
+	font-weight: bold;
+	cursor: pointer;
+    display: block;
+    max-width: 200px;
+    background-color: #fff;
+    color: #29596f;
+	border: none;
+    margin: 2rem auto 0 auto;
+	box-sizing: initial;
+	
+}
+
+.form-flat input[type="submit"]:hover {
+	color: #fff;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.form-flat input[type="submit"]:active {
+	border-width: 0;
+}
+
+.link-register {
+	color: #fff;
+	text-align: center;
+	display: block;
+	margin-top: 1rem;
+	font-size: 1.3rem;
+}
+
+.input-icon {
+	font-size: 2rem;
+	position: absolute;
+	left: 12px; 
+	top: 10px;
+	z-index: 1;
+	color: #fff;
+}
+
+.input-icon + input {
+	padding-left: 60px;
+}
+
+.input-wrapper {
+	position: relative;
+}
+
+.w50 {
+	float: left;
+	width: 49%;
+}
+
+.w50:nth-child(even) {
+	float: right;
+}
+
+@media screen and (max-width: 788px)  {
+	.w50 {
+		width: 100%;
+		float: left;
+	}
 }
