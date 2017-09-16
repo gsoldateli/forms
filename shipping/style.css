@@ -29,6 +29,20 @@ a {
 	margin: 0 auto;
 }
 
+.w30 {
+	float: left;
+	width: 35%;
+}
+
+.w30:nth-child(even) {
+	margin: 0 5%;
+	width: 40%;
+}
+
+.w30:nth-child(3) {
+	width: 15%;
+}
+
 .w50 {
 	float: left;
 	width: 48%;
@@ -126,22 +140,77 @@ a {
 	width: 100%;
 	display: block;
 	border-radius: 10px;
-	padding-top: 40%;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
-background: rgb(122,188,255); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+	min-height: 300px;
+	padding: 1rem 3rem 2rem;
+	box-sizing: border-box; 
+    box-shadow: 0px 5px 15px #333;
+	background: rgb(122,188,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
 }
 
+.card-logo {
+	display: block;
+	max-width: 100px;
+	margin: 0 auto 2rem auto;
+}
+
+.input-card {
+	cursor: pointer;
+	background-color: rgba(255,255,255,0.2);
+	border: 3px solid transparent;
+	transition: all 0.3s ease-out;
+
+}
+
+.input-card:hover {
+	background-color: rgba(255,255,255,0.4);
+}
+
+.input-card:focus {
+	background-color: rgba(255,255,255,0.6);
+	border: 3px solid #5d80a9;
+}
+
+.date-inputs-container select {
+	max-width: 60%;
+}
+
+.date-inputs-container select:last-child {
+	max-width: 36%;
+}
 
 
 @media screen and (max-width: 1541px)  {
-		 
+
 	.w50 {
 		width: 100%;
 		float: left;
+		margin-bottom: 10px;
+	}
+
+	.w30,
+	.w30:nth-child(even),
+	.w30:last-child {
+		width: 100%;
+		float: left;
+		margin: 10px 0;
+	}	
+}
+
+@media screen and (max-width: 992px)  {
+	.form {
+		max-width: 84%;
 	}
 }
+
+@media screen and (max-width: 600px)  {
+	.date-inputs-container select,
+	.date-inputs-container select:last-child {
+		max-width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
