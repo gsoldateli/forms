@@ -1,0 +1,207 @@
+html {
+	font-size: 16px;
+	font-family: Verdana, sans-serif;
+
+}
+
+body {
+	background-color: #fff;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.cf:after {
+	content: " ";
+	clear: both;
+	display: block;
+}
+
+.center-block {
+	display: block;
+	margin: 0 auto;
+}
+
+.w50 {
+	float: left;
+	width: 49%;
+}
+
+.w50:nth-child(even) {
+	float: right;
+}
+
+.bg-container {
+	position: relative;
+	width: 50%;
+    float: left;
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    /* In doubt if this looks good or not
+    box-shadow: 5px 2px 9px -2px #4e541b;
+    */
+}
+
+.form-container {
+    width: 50%;
+    float: right;
+    height: 100vh;
+    background-image: url(images/dog.png);
+    background-size: 364px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.greeting {
+    font-size: 5rem;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+
+.greeting:after {
+	content: " ";
+	display: block;
+	width: 50%;
+	height: 6px;
+	background-color: #555c2b;
+	position: absolute;
+	margin-left: 50%;
+	transform: translateX(-50%);
+    bottom: -22px;
+}
+
+.greeting.dark {
+	color: #333;
+}
+
+.greeting.dark:after {
+	background-color: #333;
+}
+
+
+.signup-box {
+    position: absolute;
+    bottom: 3rem;
+    color: #fff;
+    font-size: 1.5rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(21, 23, 8, 0.85);
+    padding: 1rem;
+}
+
+.signup-link {
+    color: #adb934;
+    font-weight: bold;
+}
+
+.form-light {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-light input {
+    padding: 16px 10px;
+    width: 80%;
+    border-radius: 7px;
+    border: 2px solid #ccc;
+    float: right;
+}
+
+.input-container {
+	margin-bottom: 1rem;
+	clear: both;
+}
+
+.input-container .label {
+    display: inline-block;
+    width: 48px;
+    font-size: 2rem;
+    float: left;
+    color: #818f37;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 100%;
+    height: 45px;
+    padding-top: 3px;
+}
+
+.form-light input[type="submit"] {
+    float: none;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #fff;
+    border-color: #6a7531;
+    color: #353a1f;
+    font-size: 1rem;
+    font-weight: bold;
+    width: auto;
+    padding: 16px 29px;
+
+    transition: all 0.3s ease-out;
+}
+
+.form-light input[type="submit"]:hover {
+	background-color: #818f37;
+}
+
+
+@media screen and (max-width: 1541px)  {
+	.bg-container,
+	.form-container {
+		float: none;
+		width: 100%;
+	}
+
+	.bg-container {
+		position: initial;
+		height: auto;
+	}
+
+	.form-container {
+	    height: auto;
+    	background-image: none;
+	}
+
+	.signup-box {
+	    position: initial;
+	    display: block;
+	    font-size: 1rem;
+	    margin-top: 50px;
+	}
+
+	.greeting {
+	    font-size: 2rem;
+	    margin: 0;
+	    margin-bottom: 2rem;
+	    padding-top: 20px;
+	}
+
+	.form-light {
+		max-width: 100%;
+	}
+
+	.form-light input {
+		max-width: 70%;
+	}
+	 
+	.w50 {
+		width: 100%;
+		float: left;
+	}
+}

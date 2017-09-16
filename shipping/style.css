@@ -1,0 +1,147 @@
+html {
+	font-size: 16px;
+	font-family: 'Roboto', 'Verdana', sans-serif;
+
+}
+
+body {
+	background-color: #fff;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.cf:after {
+	content: " ";
+	clear: both;
+	display: block;
+}
+
+.center-block {
+	display: block;
+	margin: 0 auto;
+}
+
+.w50 {
+	float: left;
+	width: 48%;
+}
+
+.w50:nth-child(even) {
+	float: right;
+}
+
+.w100 {
+	width: 100%;
+}
+
+.background-image {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.form {
+	position: relative;
+    max-width: 50%;
+    margin: 10rem auto 0 auto;
+	color: #53514F;
+	background-color: rgba(255,255,255,0.5);
+    min-height: 50vh;
+    box-shadow: 0px 5px 31px #4d341e;
+}
+
+.form-heading-container {
+    padding: 2.5rem 2rem 1rem;
+    border-bottom: 2px solid #589BEA;
+}
+
+
+.form-heading {
+	font-size: 2.4rem;
+	margin: 0;
+}
+.form-body-container {
+	padding: 2rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.form-row {
+	clear: both;
+	margin-bottom: 1.5rem;
+}
+
+.form-row:after {
+	content: " ";
+	clear: both;
+	display: block;	
+}
+
+.input-label {
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    color: #53514f;
+    background-color: rgba(255,255,255,0.8);
+    box-sizing: border-box;
+}
+
+.input.billing {
+  width: auto;
+  margin-right: 1rem;
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+
+  float: left;
+}
+
+
+.card-container {
+	width: 100%;
+	display: block;
+	border-radius: 10px;
+	padding-top: 40%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
+background: rgb(122,188,255); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+@media screen and (max-width: 1541px)  {
+		 
+	.w50 {
+		width: 100%;
+		float: left;
+	}
+}

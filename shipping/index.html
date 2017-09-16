@@ -1,0 +1,65 @@
+<!-- Based on https://dribbble.com/shots/2662953-Daily-UI-082-Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Shipping Form</title>
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="cf">
+	<div class="background-image"></div>
+	<form action="POST" action="#" class="form">
+		<div class="form-heading-container">
+			<h3 class="form-heading">SHIPPING</h3>	
+		</div>
+		<div class="form-body-container">
+			<div class="form-row">
+				<div class="w50">
+					<label for="firstName" class="input-label">FIRST NAME</label>
+					<input class="input" name="firstName" id="firstName" type="text">
+				</div>
+				<div class="w50">
+					<label for="lastName" class="input-label">LAST NAME</label>
+					<input class="input" name="lastName" id="lastName" type="text">
+				</div>				
+			</div>
+			<div class="form-row">
+				<div class="w100">
+					<label for="address" class="input-label">ADDRESS</label>
+					<input class="input" name="address" id="address" type="text">
+				</div>
+			</div>			
+			<div class="form-row">
+				<div class="w50">
+					<label for="city" class="input-label">CITY</label>
+					<input class="input" name="city" id="city" type="text">
+				</div>
+				<div class="w50">
+					<label for="country" class="input-label">COUNTRY</label>
+					<input class="input" name="country" id="country" type="text">
+				</div>				
+			</div>		
+			<div class="form-row">
+				<div class="w100">
+					<label for="sameAsBillingAddress" class="input-label">Same as billing address</label>
+					<input class="input billing" name="sameAsBillingAddress" id="sameAsBillingAddress" type="checkbox">
+				</div>
+			</div>	
+		</div>
+		<div class="form-heading-container">
+			<h3 class="form-heading">BILLING</h3>	
+		</div>
+		<div class="form-body-container">
+			<div class="card-container">
+				<div class="card-logo">
+					
+				</div>
+			</div>	
+		</div>	
+	</form>
+</body>
+</html>
