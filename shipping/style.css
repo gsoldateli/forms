@@ -72,7 +72,7 @@ a {
 .form {
 	position: relative;
     max-width: 50%;
-    margin: 10rem auto 0 auto;
+    margin: 3rem auto 0 auto;
 	color: #53514F;
 	background-color: rgba(255,255,255,0.5);
     min-height: 50vh;
@@ -224,11 +224,14 @@ a {
 
 @media screen and (max-width: 992px)  {
 	.form {
-		max-width: 84%;
+		max-width: 95%;
 	}
 }
 
 @media screen and (max-width: 600px)  {
+	html {
+		font-size: 14px;
+	}
 	.date-inputs-container select,
 	.date-inputs-container select:last-child {
 		max-width: 100%;
