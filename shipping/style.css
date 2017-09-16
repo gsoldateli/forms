@@ -124,6 +124,27 @@ a {
     box-sizing: border-box;
 }
 
+.btn-save {
+    background-color: #589BEA;
+    font-size: 1.2rem;
+    border-radius: 48px;
+    font-weight: bold;
+    padding: 16px 20px;
+    display: block;
+    color: #fff;
+    border: none;
+    box-shadow: 0px 1px 4px #333;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    outline: none;
+}
+.btn-save:hover {
+	background-color: #78a9e2;
+}
+
+.btn-save:active {
+	box-shadow: 0px 1px 1px #666;
+}
 .input.billing {
   width: auto;
   margin-right: 1rem;
@@ -139,6 +160,7 @@ a {
 .card-container {
 	width: 100%;
 	display: block;
+	margin-bottom: 2rem;
 	border-radius: 10px;
 	min-height: 300px;
 	padding: 1rem 3rem 2rem;
