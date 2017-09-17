@@ -228,4 +228,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe9f9', end
     	float: none;
 	}
 
+	.notepad-header:before, 
+	.notepad-header:after {
+	    width: 20px;
+	    height: 40px;
+	}
+
 }
