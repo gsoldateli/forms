@@ -1,43 +1,87 @@
-<!-- Based on https://dribbble.com/shots/2937312-Daily-UI-002 -->
+<!-- Based on https://dribbble.com/shots/2662953-Daily-UI-082-Form -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Signup Form</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Billing Form</title>
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body class="cf">
-<div class="bg-container cf">
-	<h2 class="greeting">Welcome back Home!</h2>
-
-	<span class="signup-box">
-	Don't have an account yet? 
-	<a href="../signup/" class="signup-link">Signup Here!</a>
-	</span>
-</div>
-<div class="form-container">
-	<h1 class="greeting dark">Login</h1>
-
-	<form action="POST" class="form-light">
-		<div class="center-block">
-			<div class="input-container cf">
-				<label for="username" class="label"><span class="fa fa-user"> </span></label>
-				<input type="email" id="username" name="username" placeholder="What is your login?">
-			</div>
-			<div class="input-container cf">
-				<label for="pwd" class="label"><span class="fa fa-key"></span></label>
-				<input type="password" id="pwd" name="pwd" placeholder="What is your password?">
-			</div>	
-			<div class="input-container">
-				<input type="submit" class="btn-submit" name="login" value="Enter Home">
-			</div>				
+	<div class="background-image"></div>
+	<div class="form">
+		<div class="form-heading-container">
+			<h3 class="form-heading">BILLING</h3>	
 		</div>
+		<div class="form-body-container">
+			<form method="POST" action="#">
+				<div class="card-container">
+					<img src="images/visa-logo.png" alt="" class="card-logo">
+					<div class="form-row">
+						<div class="w100">
+							<label for="cardNumber" class="input-label input-label-card">CARD NUMBER</label>
+							<input class="input input-card" name="cardNumber" id="cardNumber" type="text" maxlength="19" placeholder="1234 1234 1234 1234">							
+						</div>					
+					</div>	
+					<div class="form-row">
+						<div class="w30">
+							<label for="cardHolder" class="input-label input-label-card">CARD HOLDER</label>
+							<input class="input input-card" name="cardHolder" id="cardHolder" type="text" placeholder="FIRST LAST">							
+						</div>
+						<div class="w30">
+							<label for="date" class="input-label input-label-card">EXPIRATION DATE</label>
+							<div class="date-inputs-container">
+<select class="input input-card" name="date" id="date" type="text" placeholder="1234 1234 1234 1234">	
+							<option value="1">JANUARY</option>
+							<option value="2">FEBRUARY</option>
+							<option value="3">MARCH</option>
+							<option value="4">APRIL</option>
+							<option value="5">MAY</option>
+							<option value="6">JUNE</option>
+							<option value="7">JULY</option>
+							<option value="8">AUGUST</option>
+							<option value="9">SEPTEMBER</option>
+							<option value="10">OCTOBER</option>
+							<option value="11">NOVEMBER</option>
+							<option value="12">DECEMBER</option>
+							</select>	
 
-	</form>
-</div>
-	
-	
+<select class="input input-card" name="date" id="date" type="text" placeholder="1234 1234 1234 1234">	
+							<option value="2017">2017</option>
+							<option value="2018">2018</option>
+							<option value="2019">2019</option>
+							<option value="2020">2020</option>
+							<option value="2021">2021</option>
+							<option value="2022">2022</option>
+							<option value="2023">2023</option>
+							<option value="2024">2024</option>
+							<option value="2025">2025</option>
+							<option value="2026">2026</option>
+							<option value="2027">2027</option>
+							<option value="2028">2028</option>
+							<option value="2029">2029</option>
+							<option value="2030">2030</option>
+							<option value="2031">2031</option>
+							<option value="2032">2032</option>
+							</select>																			
+							</div>
+							
+						</div>
+						<div class="w30">
+							<label for="csv" class="input-label input-label-card">CSV</label>
+							<input class="input input-card" name="csv" id="csv" type="text" maxlength="3" placeholder="123">							
+						</div>												
+					</div>		
+			</div>
+				<div class="form-row">
+				<input type="submit" class="btn-save" value="✔ SAVE BILLING INFORMATION">		
+				</div>								
+
+			</form>	
+		</div>
+	</div>
 </body>
 </html>
