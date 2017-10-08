@@ -332,6 +332,7 @@ window.$v = validator;
 
 function FormValidator(formSelector,checkEvent) {
 	var form;
+	var liveValidation = false;
 
 	this._registeredValidations = [];
 
@@ -377,32 +378,51 @@ function FormValidator(formSelector,checkEvent) {
 		this.form.addEventListener(checkEvent, this.validate.bind(this));
 		return this;
 	},
-	this.addValidation = function(inputSelector, validatorName) {
+	this.addValidation = function(inputSelector, validatorName, errorMsg) {
 		var inputs = this.form.querySelectorAll(inputSelector);
+		
 
-		if(inputs.length === 0) return this;
+		if( inputs.length === 0 ) return this;
+		this._registeredValidations.push({input:inputs,func:validatorName,errorMsg:errorMsg});
 
-		this._registeredValidations.push({input:inputs,func:validatorName});
-
+		this._registerInputValidation(inputs, validatorName, errorMsg);
+		
 		return this;
+	},
+
+	this._registerInputValidation = function(inputs, validatorName, errorMsg) {
+		
+		var checkInput = this._checkInput.bind(this);
+
+		var validateFunc = function(input){
+			input.addEventListener("input", function(){
+				checkInput(input,validatorName,errorMsg);
+				if(!input.checkValidity()) {
+					this.form.querySelector('[type=submit]').click();
+				}
+			});
+		}.bind(this);
+
+		inputs.forEach(validateFunc);		
 	},
 	this.validate = function(event) {
 		var form = this.form;
 		var currenValidation;
+		var errorMsg;
 		var inputs;
 		var func;
 
-		event.preventDefault();
-		console.log(this._registeredValidations);
+		//event.preventDefault();
 		
 		for(var index in this._registeredValidations) {
 
 			currenValidation = this._registeredValidations[index];
 			inputs = currenValidation.input;
 			func = currenValidation.func;
+			errorMsg = currenValidation.errorMsg;
 
 			for(var iIndex = 0; iIndex < inputs.length; iIndex++) {
-				this._checkInput(inputs[iIndex],func);				
+				this._checkInput(inputs[iIndex],func,errorMsg);				
 			}
 		}
 		
@@ -412,37 +432,35 @@ function FormValidator(formSelector,checkEvent) {
 		}
 		else {
 			form.setAttribute("class", (form.getAttribute("class")|| "").replace(" valid ","") + " valid ");	
+			this.form.submit();
 		}
-
-		return false;
 	},
 
-	this._checkInput = function(input,func) {
-		console.log('CI:'+input.value+ "|" + this.check[func](input.value));
+	this._checkInput = function(input,func,errorMsg) {
+		console.log('Check Input!');
 		if(!this.check[func](input.value) ) {
 
 			if(!$v.contains( (input.getAttribute("class") || " ") ,[" invalid "])) {
-				console.log('tem invalid');
 				input.setAttribute("class", (input.getAttribute("class")|| "").replace(" invalid ","") + " invalid ");
+				input.setCustomValidity(errorMsg);
 			}
-			
 		}
 		else {
 			input.setAttribute("class", (input.getAttribute("class")|| "").replace(" invalid ",""));
+			input.setCustomValidity("");
 		}
 
 	}
 
 	if(form === undefined) {
-		
 		this.init(formSelector,checkEvent);
 	}
 
 }
 
 var fv = new FormValidator('form','submit')
-.addValidation('#firstName', 'name')
-.addValidation('#lastName', 'name')
-.addValidation('[type=email]', 'email')
-.addValidation('#birthday', 'birth')
-.addValidation('[type=password]', 'password');
+.addValidation('#firstName', 'name','Sir, your first name must have more than 1 character!')
+.addValidation('#lastName', 'name','Sir, your last name must have more than 1 character!')
+.addValidation('[type=email]', 'email','Sir, your correct email is needed!')
+.addValidation('#birthday', 'birth', 'You need to be born before 1990, do not fool me ok?')
+.addValidation('[type=password]', 'password', 'Your password must contain from 6 to 8 characters!');
