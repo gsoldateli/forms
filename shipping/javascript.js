@@ -436,7 +436,6 @@ function FormValidator(formSelector,checkEvent) {
 	},
 
 	this._checkInput = function(input,func,errorMsg) {
-		console.log('Check Input!');
 		if(!this.check[func](input.value) ) {
 
 			if(!$v.contains( (input.getAttribute("class") || " ") ,[" invalid "])) {
@@ -459,7 +458,4 @@ function FormValidator(formSelector,checkEvent) {
 
 var fv = new FormValidator('form','submit')
 .addValidation('#firstName', 'name','Sir, your first name must have more than 1 character!')
-.addValidation('#lastName', 'name','Sir, your last name must have more than 1 character!')
-.addValidation('[type=email]', 'email','Sir, your correct email is needed!')
-.addValidation('#birthday', 'birth', 'You need to be born before 1990, do not fool me ok?')
-.addValidation('[type=password]', 'password', 'Your password must contain from 6 to 8 characters!');
+.addValidation('#lastName', 'name','Sir, your last name must have more than 1 character!');
