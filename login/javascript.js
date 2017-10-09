@@ -338,22 +338,9 @@ function FormValidator(formSelector,checkEvent) {
 
 	this.check = {
 		'email': function(input) {
-			return	$v.isEmailAddress(input);
+			return $v.isEmailAddress(input);
 		},
-		'afterToday': function(input) {
-
-			var isAfterToday = true;
-
-			try	{
-				isAfterToday = $v.isAfterToday(input)
-			}
-			catch(error) {
-				isAfterToday = false;
-			}
-
-			return isAfterToday;
-		},
-		'contact': function(input) {
+		'password': function(input) {
 			return $v.isNumberBetween(input.length,6,8);
 		}
 	}
@@ -444,6 +431,6 @@ function FormValidator(formSelector,checkEvent) {
 }
 
 var fv = new FormValidator('form','submit')
-.addValidation('#date', 'afterToday','Sir, there is no sense in scheduling something to yesterday... PAY ATTENTION!')
-.addValidation('#contact', 'contact','Sir, your contact number must be between 6 and 8 characters!')
-.addValidation('[type=email]', 'email','Please, I need your email!!');
+.addValidation('#username', 'email','Your username must be your email address!')
+.addValidation('#pwd', 'password','Sir, your password must be between 6 and 8 characters!');
+
