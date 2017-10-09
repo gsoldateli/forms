@@ -67,6 +67,10 @@ a {
 	
 }
 
+.form-flat input.invalid {
+	border-color: red;
+}
+
 .form-flat input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #fff;
 }

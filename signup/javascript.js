@@ -369,7 +369,6 @@ function FormValidator(formSelector,checkEvent) {
 		'password': function(input) {
 			return $v.isNumberBetween(input.length,6,8);
 		}
-
 	}
 
 
