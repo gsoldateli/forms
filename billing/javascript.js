@@ -332,7 +332,6 @@ window.$v = validator;
 
 function FormValidator(formSelector,checkEvent) {
 	var form;
-	var liveValidation = false;
 
 	this._registeredValidations = [];
 
